@@ -6,13 +6,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 
-    <!-- This page's styles/scripts-->
-    <script src="./script.js"></script>
-    <link rel="stylesheet" href="./styles.css">
-
     <!-- Christian's "Pages" repo -->
     <script src="https://rawgit.com/chrisBas/pages/master/pages.js"></script>
     <link rel="stylesheet" href="https://rawgit.com/chrisBas/pages/master/pages.css">
+    <!-- Christian's "Search" repo -->
+    <script src="https://rawgit.com/chrisBas/search/master/search.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/chrisBas/search/master/search.css">
+
+    <!-- This page's styles/scripts-->
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div id="welcome">
@@ -33,12 +36,15 @@
         </div>
     </div>
     <div class="container">
+        <div class="description">
+            <button class="btn btn-danger float-right">x</button>
+            Check out some of my projects by navigating below.  If you would like to see a more in-depth description of the projects or possibly use them, then click the repository links next to the titles.
+        </div>
         <div class="pages">
             <div class="page">
-                <button class="fa fa-angle-left float-left mt-5" onclick="pg.prev()"></button>
                 <button class="fa fa-angle-right float-right mt-5" onclick="pg.next()"></button>
                 <div class="row justify-content-center">
-                    <h3><a href="https://github.com/chrisBas/pages" target="void">Pages</a></h3>
+                    <h3 class="title">Pages<a href="https://github.com/chrisBas/pages" target="void">github-repo</a></h3>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-sm-12">
@@ -67,22 +73,68 @@
                         <div class="pages demo" id="pages-demo">
                             <div class="page">
                                 Page One<br>
-                                <button onclick="pgDemo.next()">>></button>
+                                <button onclick="pgDemo.next()">></button>
                             </div>
                             <div class="page">
                                 Page Two<br>
-                                <button onclick="pgDemo.prev()"><<</button>
-                                <button onclick="pgDemo.next()">>></button>
+                                <button onclick="pgDemo.prev()"><</button>
+                                <button onclick="pgDemo.next()">></button>
                             </div>
                             <div class="page">
                                 Page Three<br>
-                                <button onclick="pgDemo.prev()"><<</button>
+                                <button onclick="pgDemo.prev()"><</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="page">
+                    <button class="fa fa-angle-left float-left mt-5" onclick="pg.prev()"></button>
+                    <div class="row justify-content-center">
+                        <h3 class="title">Search<a href="https://github.com/chrisBas/search" target="void">github-repo</a></h3>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-sm-12">
+                            <h5>Description:</h5>
+                            <p>Small JS/CSS library that adds efficient and customizable search functionality to a search-field.</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-5">
+                                <h5>Code:</h5>
+                                <div class="code-container">
+                                    <code>
+                                        &lt;input type="text" id="someUniqueId" /&gt; <br />
+                                        ... </br>
+                                        &lt;script&gt; <br />
+                                        &nbsp;&nbsp;function callback(result) {<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;return new Promise( <br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function(resolve, reject) {...} <br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;)<br />
+                                        &nbsp;&nbsp;}<br />
+                                        &nbsp;&nbsp;srch.setup("#someUniqueId", callback)<br />
+                                        &lt;/script&gt; <br />
+                                    </code>
+                                </div>
+                        </div>
+                        <div class="col-sm-12 col-md-5">
+                            <h5>Demo:</h5>
+                            <div class="demo">
+                                <input type="text" id="search-demo" />
+                                <p>
+                                    start to type out a single digit <br />
+                                    * notice the intentional delay <br />
+                                    * this will limit server requests <br />
+                                    &nbsp;&nbsp; thereby saving wasteful network <br \>
+                                    &nbsp;&nbsp; usage
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>  <!-- endof .pages -->
     </div>
 </body>
 </html>

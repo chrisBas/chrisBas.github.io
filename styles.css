@@ -87,6 +87,18 @@ html, body {
 
 
 /* CENTRAL-SECTION */
+.description {
+    width: 80%;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 6px;
+    margin: auto;
+    margin-top: 14px;
+
+}
+h3.title>a{
+    font-size: 0.5em;
+}
 .pages {
     padding: 20px 0;
 }
